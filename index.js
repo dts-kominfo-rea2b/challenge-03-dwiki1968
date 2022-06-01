@@ -21,10 +21,26 @@ const dataBelanjaan = [
 ];
 
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
-const listBelanjaan = null;
+const listBelanjaan = (dataBelanjaan) => {
+  initArr = [];
+  dataBelanjaan.map((bel) => {
+    initArr.push("- " + bel.nama + " x " + bel.kuantitas);
+  });
+  return initArr;
+};
+
+// console.log("oke", listBelanjaan(dataBelanjaan));
 
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
-const totalBelanjaan = null;
+const totalBelanjaan = (dataBelanjaan) => {
+  initTotal = 0;
+  dataBelanjaan.map((bel) => {
+    initTotal = initTotal + bel.harga * bel.kuantitas;
+  });
+  return initTotal;
+};
+
+// console.log("oke", totalBelanjaan(dataBelanjaan));
 
 // ! JANGAN DIMODIFIKASI
 const main = () => {
